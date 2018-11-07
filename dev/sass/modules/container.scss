@@ -1,0 +1,22 @@
+/*----------------------------------------
+ * Container
+ *----------------------------------------*/
+.container {
+    padding: $divider3;
+}
+
+@each $name, $color in $darkColors {
+  .container-#{$name}{
+      @extend .container;
+      background-color: $color;
+      color: $white;
+  }
+}
+
+@each $name, $color in $lightColors {
+  .container-#{$name}{
+      @extend .container;
+      background-color: $color;
+      color: $black;
+  }
+}
